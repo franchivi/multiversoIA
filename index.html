@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiverso IA - Consultoría y Automatización</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <canvas id="neural-canvas"></canvas>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="Multiverso IA" class="logo-img" id="main-logo" onerror="this.style.display='none'">
+                <span class="logo-text">MULTIVERSO IA</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#tecnologia">Tecnología</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+            </ul>
+            <a href="#contacto" class="btn-primary btn-nav">Contacto</a>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content glass-container">
+                <img src="images/logo.png" alt="Multiverso IA Logo Principal" class="hero-logo" onerror="this.style.display='none'">
+                <h1 class="glitch-text" data-text="Tu empresa, expandida por la IA">Tu empresa, expandida por la IA</h1>
+                <p class="subtitle">Especialistas en desarrollo, implantación y automatización de procesos inteligentes</p>
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn-primary glow-btn">Solicitar Auditoría IA</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="services">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card glass-container">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <h3>Desarrollo de Soluciones IA</h3>
+                    <p>Modelos de inteligencia artificial a medida para resolver los desafíos específicos de tu negocio, optimizando decisiones y predicciones de manera ágil.</p>
+                </div>
+                <div class="service-card glass-container">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>Automatización de Flujos</h3>
+                    <p>Conectamos tus herramientas y procesos para eliminar el trabajo repetitivo, aumentando la productividad de tu equipo drásticamente y sin errores.</p>
+                </div>
+                <div class="service-card glass-container">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3>Implantación Estratégica</h3>
+                    <p>Te acompañamos en la transformación digital de tu empresa asegurando que la IA se integre de manera natural, escalable y sumamente rentable.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tecnologia" class="tech-section">
+            <div class="tech-content glass-container">
+                <h2 class="section-title">Arquitectura de Vanguardia</h2>
+                <div class="tech-grid">
+                    <div class="tech-text">
+                        <p>Diseñamos sistemas preparados para el futuro. Nuestra metodología se basa en la <strong>integración con arquitecturas modernas</strong>, asegurando que cada solución sea escalable, segura y altamente eficiente.</p>
+                        <p>Nos enfocamos en la <strong>optimización de recursos</strong>, utilizando infraestructuras cloud y modelos de IA eficientes cuando es necesario, garantizando el máximo rendimiento con el mínimo coste operativo.</p>
+                        <ul class="tech-features">
+                            <li><i class="fa-solid fa-check-circle"></i> APIs RESTful y GraphQL</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Microservicios y contenedores Docker</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Procesamiento y análisis en tiempo real</li>
+                        </ul>
+                    </div>
+                    <div class="tech-visual">
+                        <div class="multiverse-cube">
+                            <div class="cube-face front"><i class="fa-solid fa-brain"></i></div>
+                            <div class="cube-face back"><i class="fa-solid fa-server"></i></div>
+                            <div class="cube-face right"><i class="fa-solid fa-database"></i></div>
+                            <div class="cube-face left"><i class="fa-solid fa-cloud"></i></div>
+                            <div class="cube-face top"><i class="fa-solid fa-microchip"></i></div>
+                            <div class="cube-face bottom"><i class="fa-solid fa-shield-halved"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="about">
+            <div class="about-grid">
+                <div class="about-image glass-container">
+                    <div class="abstract-shape"></div>
+                </div>
+                <div class="about-text glass-container">
+                    <h2 class="section-title">Sobre Nosotros</h2>
+                    <h3>Eficiencia y Escalabilidad en nuestro ADN</h3>
+                    <p>En Multiverso IA no solo implementamos tecnología; transformamos negocios. Entendemos que cada empresa es un universo complejo, y nuestra misión es proporcionar las herramientas de Inteligencia Artificial que permitan expandir sus horizontes de forma ilimitada.</p>
+                    <p>Nuestra consultoría se centra en resultados medibles, buscando siempre la máxima rentabilidad, la escalabilidad a largo plazo y la eficiencia operativa en el día a día de nuestros clientes.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="footer-content glass-container">
+            <div class="footer-brand">
+                <span class="logo-text">MULTIVERSO IA</span>
+                <p>Consultoría de IA Manager y automatización de procesos.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p><i class="fa-solid fa-envelope"></i> info@multiversoia.com</p>
+                <p><i class="fa-solid fa-phone"></i> +34 900 000 000</p>
+                <p><i class="fa-solid fa-location-dot"></i> Madrid, España</p>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Multiverso IA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
