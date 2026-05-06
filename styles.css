@@ -137,6 +137,7 @@ header {
     display: flex;
     align-items: center;
     gap: 15px;
+    max-width: 80%; /* Asegura que no ocupe todo el ancho en móvil */
 }
 
 .logo-img {
@@ -597,9 +598,20 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .logo-text {
+        display: none; /* Ocultamos el texto en móvil ya que el logo lo incluye */
+    }
+    
     .glass-nav {
         padding: 0.8rem 1.5rem;
         flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+        order: 1; /* Asegura que el botón se quede a la derecha en la primera línea */
     }
     
     .nav-links {
@@ -611,6 +623,7 @@ footer {
         gap: 1.5rem;
         margin-top: 1rem;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+        order: 2; /* Los links bajan a la siguiente línea */
     }
     
     .nav-links.active {
@@ -621,16 +634,12 @@ footer {
         display: none;
     }
     
-    .mobile-menu-btn {
-        display: block;
-    }
-    
     .hero-content {
         padding: 3rem 2rem;
     }
     
     .glitch-text {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
     }
     
     .tech-grid, .about-grid {
@@ -662,7 +671,7 @@ footer {
     }
     
     .glitch-text {
-        font-size: 2.2rem;
+        font-size: 1.8rem; /* Reducido para que quepa mejor en una línea o dos */
     }
     
     .service-card, .tech-content, .about-text, .footer-content {
