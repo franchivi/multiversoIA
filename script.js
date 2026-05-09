@@ -143,3 +143,54 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         }
     });
 });
+
+// Contact Form AJAX Submission
+const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+        formStatus.style.display = 'none';
+        
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData.entries());
+        
+        fetch("https://formsubmit.co/ajax/multiverso@outlook.com", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                formStatus.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.';
+                formStatus.style.color = '#00f0ff';
+                formStatus.style.display = 'block';
+                contactForm.reset();
+            } else {
+                formStatus.textContent = 'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.';
+                formStatus.style.color = '#ff4081';
+                formStatus.style.display = 'block';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            formStatus.textContent = 'Error de conexión. Inténtalo de nuevo más tarde.';
+            formStatus.style.color = '#ff4081';
+            formStatus.style.display = 'block';
+        })
+        .finally(() => {
+            submitBtn.textContent = 'Enviar Mensaje';
+            submitBtn.disabled = false;
+        });
+    });
+}
