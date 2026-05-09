@@ -811,3 +811,32 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Fix mobile menu overlap */
+@media (max-width: 768px) {
+    .logo {
+        gap: 10px;
+        max-width: calc(100% - 60px); /* Leave room for the hamburger menu */
+    }
+    .logo-img {
+        height: 45px;
+    }
+    .logo-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        gap: 8px;
+    }
+    .logo-img {
+        height: 38px;
+    }
+    .logo-text {
+        font-size: 0.85rem;
+    }
+    .glass-nav {
+        padding: 0.6rem 1rem;
+    }
+}
