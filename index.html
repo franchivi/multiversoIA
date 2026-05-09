@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -115,9 +115,72 @@
                 </div>
             </div>
         </section>
+
+        <section id="contacto" class="contact-section">
+            <h2 class="section-title">Hablemos de tu proyecto</h2>
+            <div class="contact-grid">
+                <div class="contact-info glass-container">
+                    <h3>Contacto Directo</h3>
+                    <p>¿Tienes alguna duda o quieres empezar a trabajar con nosotros? Escríbenos directamente o utiliza el formulario.</p>
+                    <div class="contact-methods">
+                        <div class="method-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>multiverso@outlook.com</p>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>653418174</p>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>Córdoba, España</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <h4>&nbsp;</h4>
+                        <div>
+                            <a href="#" aria-label="LinkedIn"><i></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="GitHub"><i></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper glass-container">
+                    <form action="https://formsubmit.co/multiverso@outlook.com" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email de Contacto</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" required placeholder="¿En qué podemos ayudarte?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Cuéntanos más sobre tu proyecto..."></textarea>
+                        </div>
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" class="btn-primary glow-btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer id="contacto">
+    <footer>
         <div class="footer-content glass-container">
             <div class="footer-brand">
                 <span class="logo-text">MULTIVERSO IA</span>
@@ -125,8 +188,8 @@
             </div>
             <div class="footer-contact">
                 <h4>Contacto</h4>
-                <p><i class="fa-solid fa-envelope"></i> info@multiversoia.com</p>
-                <p><i class="fa-solid fa-phone"></i> +34 900 000 000</p>
+                <p><i class="fa-solid fa-envelope"></i> multiverso@outlook.com</p>
+                <p><i class="fa-solid fa-phone"></i> 653418174</p>
                 <p><i class="fa-solid fa-location-dot"></i> Madrid, España</p>
             </div>
             <div class="footer-social">
@@ -142,6 +205,11 @@
             <p>&copy; 2026 Multiverso IA. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/34653418174" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
